@@ -1,3 +1,10 @@
+'''
+Day:            1
+File:           report_repair.py
+Author:         Rishabh Ranjan
+Last Modified:  12/1/2020
+'''
+
 def main():
     f = open('day_1_input.txt', 'r')
     expense_report = []
