@@ -40,8 +40,8 @@ def main():
     for x in f:
         passwords.append(x)
     f.close()
-    print(old_num_valid_passwords(passwords))
-    print(new_num_valid_passwords(passwords))
+    print("Part 1 Answer: ", old_num_valid_passwords(passwords))
+    print("Part 2 Answer: ", new_num_valid_passwords(passwords))
 
 if __name__ == '__main__':
     main()
