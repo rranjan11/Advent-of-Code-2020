@@ -22,7 +22,7 @@ def main():
     f = open('day_1_input.txt', 'r')
     expense_report = []
     for x in f:
-        expense_report.append(int(x))
+        expense_report.append(int(x.rstrip('\n')))
     f.close()
     sum = 2020
     print("Part 1 Answer: ", two_entries_with_sum(expense_report, sum))

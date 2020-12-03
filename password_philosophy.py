@@ -12,7 +12,7 @@ def old_num_valid_passwords(passwords):
         letter_min = int(password[:password.index('-')])
         letter_max = int(password[password.index('-') + 1:password.index(' ')])
         letter_count = 0
-        for i in range(password.index(':') + 2, len(password) - 1):
+        for i in range(password.index(':') + 2, len(password)):
             if (password[i] == letter):
                 letter_count += 1
         if letter_count >= letter_min and letter_count <= letter_max:
@@ -38,7 +38,7 @@ def main():
     f = open('day_2_input.txt', 'r')
     passwords = []
     for x in f:
-        passwords.append(x)
+        passwords.append(x.rstrip('\n'))
     f.close()
     print("Part 1 Answer: ", old_num_valid_passwords(passwords))
     print("Part 2 Answer: ", new_num_valid_passwords(passwords))
