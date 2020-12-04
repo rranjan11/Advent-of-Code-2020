@@ -2,7 +2,7 @@
 Day:            2
 File:           password_philosophy.py
 Author:         Rishabh Ranjan
-Last Modified:  12/2/2020
+Last Modified:  12/3/2020
 '''
 
 def old_num_valid_passwords(passwords):
@@ -36,9 +36,7 @@ def new_num_valid_passwords(passwords):
 
 def main():
     f = open('day_2_input.txt', 'r')
-    passwords = []
-    for x in f:
-        passwords.append(x.rstrip('\n'))
+    passwords = f.read().splitlines()
     f.close()
     print("Part 1 Answer: ", old_num_valid_passwords(passwords))
     print("Part 2 Answer: ", new_num_valid_passwords(passwords))

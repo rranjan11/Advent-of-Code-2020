@@ -16,9 +16,7 @@ def count_trees(grid, right, down):
 
 def main():
     f = open('day_3_input.txt', 'r')
-    grid = []
-    for x in f:
-        grid.append(x.rstrip('\n'))
+    grid = f.read().splitlines()
     f.close()
     print("Part 1 Answer: ", count_trees(grid, 3, 1))
     print("Part 2 Answer: ", count_trees(grid, 1, 1)*count_trees(grid, 3, 1)*count_trees(grid, 5, 1)*count_trees(grid, 7, 1)*count_trees(grid, 1, 2))

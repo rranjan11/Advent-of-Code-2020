@@ -2,7 +2,7 @@
 Day:            1
 File:           report_repair.py
 Author:         Rishabh Ranjan
-Last Modified:  12/1/2020
+Last Modified:  12/3/2020
 '''
 
 def two_entries_with_sum(expense_report, sum):
@@ -20,9 +20,7 @@ def three_entries_with_sum(expense_report, sum):
 
 def main():
     f = open('day_1_input.txt', 'r')
-    expense_report = []
-    for x in f:
-        expense_report.append(int(x.rstrip('\n')))
+    expense_report = list(map(int, f.read().splitlines()))
     f.close()
     sum = 2020
     print("Part 1 Answer: ", two_entries_with_sum(expense_report, sum))
