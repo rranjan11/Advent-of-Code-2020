@@ -2,7 +2,7 @@
 Day:            4
 File:           passport_processing.py
 Author:         Rishabh Ranjan
-Last Modified:  12/4/2020
+Last Modified:  12/6/2020
 '''
 
 def get_valid_passports(passports, required_fields):
@@ -89,7 +89,6 @@ def main():
             passports.append(temp_passport)
         else:
             passport = temp_passport
-        i = 0
         start_index = 0
         field = ""
         value = ""
