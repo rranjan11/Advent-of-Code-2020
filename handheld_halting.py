@@ -2,7 +2,7 @@
 Day:            8
 File:           handheld_halting.py
 Author:         Rishabh Ranjan
-Last Modified:  12/8/2020
+Last Modified:  12/12/2020
 '''
 
 def run_boot_code(boot_code):
@@ -26,8 +26,8 @@ def main():
     f = open('day_8_input.txt', 'r')
     boot_code = f.read().splitlines()
     f.close()
-    accululator, terminated = run_boot_code(boot_code)
-    print("Part 1 Answer: ", accululator)
+    accumulator, terminated = run_boot_code(boot_code)
+    print("Part 1 Answer: ", accumulator)
     for i in range(len(boot_code)):
         boot_code_copy = boot_code.copy()
         if boot_code_copy[i][:3] == "jmp":
