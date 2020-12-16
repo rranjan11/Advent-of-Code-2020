@@ -26,7 +26,7 @@ def find_error_rate(fields, nearby_tickets):
             invalid_tickets.append(ticket)
     return error_rate, invalid_tickets
 
-def find_field_positions(fields, my_ticket, nearby_tickets):
+def find_field_positions(fields, my_ticket, nearby_tickets, starting_word):
     possible_fields = []
     for i in range(len(nearby_tickets[0])):
         possible_fields.append(list(fields.keys()))
@@ -50,7 +50,6 @@ def find_field_positions(fields, my_ticket, nearby_tickets):
                         other_field_list.remove(field_list[0])
             else:
                 all_fields_found = False
-    starting_word = "departure"
     product = 1
     for i in range(len(my_ticket)):
         if possible_fields[i][0].startswith(starting_word):
@@ -95,7 +94,7 @@ def main():
     print("Part 1 Answer: ", error_rate)
     for ticket in invalid_tickets:
         nearby_tickets.remove(ticket)
-    print("Part 2 Answer: ", find_field_positions(fields, my_ticket, nearby_tickets))
+    print("Part 2 Answer: ", find_field_positions(fields, my_ticket, nearby_tickets, "departure"))
 
 if __name__ == '__main__':
     main()
