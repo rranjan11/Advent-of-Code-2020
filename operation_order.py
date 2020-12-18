@@ -17,9 +17,18 @@ def evaluate_expression(expression, addition_precedence):
             parentheses_nesting -= 1
             if parentheses_nesting == 0:
                 return evaluate_expression(expression[:start_index - 1] + [str(evaluate_expression(expression[start_index:i], addition_precedence))] + expression[i + 1:], addition_precedence)
-    all_plus_signs_found = False if addition_precedence else True
     while len(expression) > 1:
-        if all_plus_signs_found:
+        if addition_precedence:
+            addition_precedence = False
+            for i in range(len(expression)):
+                if expression[i] == '+':
+                    value = int(expression.pop(i - 1))
+                    expression.pop(i - 1)
+                    value += int(expression.pop(i - 1))
+                    expression.insert(i - 1, str(value))
+                    addition_precedence = True
+                    break
+        else:
             for i in range(len(expression)):
                 if expression[i] == '+':
                     value = int(expression.pop(i - 1))
@@ -32,16 +41,6 @@ def evaluate_expression(expression, addition_precedence):
                     expression.pop(i - 1)
                     value *= int(expression.pop(i - 1))
                     expression.insert(i - 1, str(value))
-                    break
-        else:
-            all_plus_signs_found = True
-            for i in range(len(expression)):
-                if expression[i] == '+':
-                    value = int(expression.pop(i - 1))
-                    expression.pop(i - 1)
-                    value += int(expression.pop(i - 1))
-                    expression.insert(i - 1, str(value))
-                    all_plus_signs_found = False
                     break
     return int(expression[0])
 
