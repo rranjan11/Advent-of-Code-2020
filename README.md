@@ -36,3 +36,17 @@ Day 16: Ticket Translation
 Day 17: Conway Cubes
 
 Day 18: Operation Order
+
+Day 19: Monster Messages (unfinished)
+
+Day 20: Jurassic Jigsaw (unfinished)
+
+Day 21: Allergen Assessment (not started)
+
+Day 22: Crab Combat (unfinished)
+
+Day 23: Crab Cups (unfinished)
+
+Day 24: Lobby Layout
+
+Day 25: Combo Breaker
