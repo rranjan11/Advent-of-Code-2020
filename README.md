@@ -39,7 +39,7 @@ Day 18: Operation Order
 
 Day 19: Monster Messages (unfinished)
 
-Day 20: Jurassic Jigsaw (unfinished)
+Day 20: Jurassic Jigsaw
 
 Day 21: Allergen Assessment (not started)
 
